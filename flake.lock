@@ -1,50 +1,32 @@
 {
   "nodes": {
-    "gnulib-src": {
+    "dhcpcanon-src": {
       "flake": false,
       "info": {
-        "lastModified": 1588070119,
-        "narHash": "sha256-gMIWbMSKisS5w6QxKFfN1IJHPHxZw9h5upzxpada+1c=",
-        "revCount": 20684
+        "lastModified": 1523819632,
+        "narHash": "sha256-qOmkXokR9ThlrO0o8N+y/PCbqkj4eP1jHIbfIBBq/LI=",
+        "revCount": 248
       },
       "locked": {
         "ref": "master",
-        "rev": "5ec4d920e4acb45225320c3df9ae32fdff928413",
+        "rev": "9f51a29e57fe93dc93fb22bb0ed12fcfe9557e59",
         "type": "git",
-        "url": "https://git.savannah.gnu.org/git/gnulib.git"
+        "url": "https://github.com/juga0/dhcpcanon.git"
       },
       "original": {
         "type": "git",
-        "url": "https://git.savannah.gnu.org/git/gnulib.git"
-      }
-    },
-    "hello-src": {
-      "flake": false,
-      "info": {
-        "lastModified": 1549746003,
-        "narHash": "sha256-7losVbaLgy9pjL6GoOrZAK6O6nCXm3pddo03UZDjxUc=",
-        "revCount": 454
-      },
-      "locked": {
-        "ref": "master",
-        "rev": "0cce403f478bd0a4a60d0b8566c67d3a72498008",
-        "type": "git",
-        "url": "https://git.savannah.gnu.org/git/hello.git"
-      },
-      "original": {
-        "type": "git",
-        "url": "https://git.savannah.gnu.org/git/hello.git"
+        "url": "https://github.com/juga0/dhcpcanon.git"
       }
     },
     "nixpkgs": {
       "info": {
-        "lastModified": 1588027483,
-        "narHash": "sha256-DcNFRegA72g1fmVWp+kFxxD4JuAwwM7XjYy0ebRa56U="
+        "lastModified": 1591200341,
+        "narHash": "sha256-6RiqKKyvQAYNbmCdQq/b7umkJS4jymfrqLMERyoRCHE="
       },
       "locked": {
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "2faa76db27c4a8045d050d9b390dbb2249b0f3c0",
+        "rev": "05a32d8e771dc39438835ba0e3141d68ad4e3068",
         "type": "github"
       },
       "original": {
@@ -55,8 +37,7 @@
     },
     "root": {
       "inputs": {
-        "gnulib-src": "gnulib-src",
-        "hello-src": "hello-src",
+        "dhcpcanon-src": "dhcpcanon-src",
         "nixpkgs": "nixpkgs"
       }
     }
