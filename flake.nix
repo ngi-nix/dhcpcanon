@@ -52,6 +52,8 @@
         # Tests run by 'nix flake check' and by Hydra.
         checks = forAllSystems (
           system: {
+            inherit (self.packages.${system}) dhcpcanon;
+
             vmTest = import ./vmtest.nix { inherit nixpkgs system; module = self.nixosModules.dhcpcanon; };
           }
         );
