@@ -48,7 +48,7 @@ makeTest {
     assert "(eth1) state changed REQUESTING -> bound" in client.succeed(
         "journalctl -b -u dhcpcanon-eth1 -o cat"
     )
-    client.succeed("fgrep 'nameserver 8.1.8.1' /etc/resolv.conf")
+    client.wait_until_succeeds("fgrep 'nameserver 8.1.8.1' /etc/resolv.conf")
     assert "DHCPACK" in server.succeed("journalctl -b -u dhcpd4 -o cat")
   '';
 }
