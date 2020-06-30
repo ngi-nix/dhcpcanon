@@ -15,6 +15,8 @@ makeTest {
       imports = [ module ];
 
       services.dhcpcanon."eth1".enable = true;
+
+      environment.systemPackages = [ pkgs.knot-dns ];
     };
 
     server = { pkgs, lib, ... }: {
@@ -50,5 +52,6 @@ makeTest {
     )
     client.wait_until_succeeds("fgrep 'nameserver 8.1.8.1' /etc/resolv.conf")
     assert "DHCPACK" in server.succeed("journalctl -b -u dhcpd4 -o cat")
+    client.succeed("kdig nixos.org |& fgrep 8.1.8.1")
   '';
 }
